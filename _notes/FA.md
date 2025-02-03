@@ -1,4 +1,3 @@
-
 ---
 title: "Note of Fourier Analysis"
 pdf_url: "/notes/FA.pdf"
