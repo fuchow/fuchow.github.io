@@ -4,7 +4,7 @@ permalink: /links/
 layout: single
 ---
 
-### Internet Resources
+## Internet Resources
 - [Homepage of Prof.Zhang](https://www.zhangjy9610.me/)
 - [Homepage of Tianyang Sun](https://tysunseven.github.io/)
 - [Homepage of Weiyu](https://github.com/Weiyu-USTC/USTCmath-stat)
@@ -12,7 +12,7 @@ layout: single
 - [z-library](https://z-lib.fm/)
 - [评课社区](https://icourse.club/)
 
-### Useful Tools
+## Useful Tools
 - [Overleaf](https://www.overleaf.com/)
 - [Wolfram Alpha](https://www.wolframalpha.com/)
 - [Class recording platform](https://github.com/TMYTiMidlY/capture-courses?tab=readme-ov-file)
