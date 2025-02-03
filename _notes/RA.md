@@ -1,5 +1,5 @@
 ---
-title: "Note of Real Analysis"
+title: "A note of Real Analysis"
 pdf_url: "/notes/RA.pdf"
 ---
 
