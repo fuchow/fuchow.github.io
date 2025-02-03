@@ -9,8 +9,7 @@ layout: single  # 单栏布局
 
 ## Education Background
 - **Degree**：Bachlor of Mathematics  
-**School**：University of Science and Technology of China(USTC) 
-**During**：2023 - 2027
+**School**：University of Science and Technology of China(USTC) 2023 - 2027
 
 ## Skill
 - To be updated...
