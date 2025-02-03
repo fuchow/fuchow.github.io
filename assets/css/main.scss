@@ -39,31 +39,5 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
+    "include/custom"
 ;
-// 笔记列表样式
-.notes-list {
-  margin: 2rem 0;
-
-  .note-item {
-    margin-bottom: 2rem;
-
-    .note-title {
-      color: #2c3e50;
-      margin-bottom: 0.5rem;
-    }
-
-    .note-description {
-      color: #666;
-      font-size: 0.95em;
-      margin-bottom: 0.5rem;
-    }
-
-    .note-pdf-link {
-      color: #0366d6;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
