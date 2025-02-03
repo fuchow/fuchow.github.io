@@ -4,10 +4,15 @@ permalink: /notes/
 layout: archive
 ---
 
-{% for note in site.notes %}
-  <div class="publication-item">
-    <h3><a href="{{ note.url }}">{{ note.title }}</a></h3>
-    <p>{{ note.date | date: "%Y" }} | {{ note.course }}</p>
-    <a href="{{ note.pdf_url }}" target="_blank">[PDF]</a>
-  </div>
-{% endfor %}
+<div class="notes-list">
+  {% for note in site.notes %}
+    <div class="note-item">
+      <h3 class="note-title">{{ note.title }}</h3>
+      <div class="note-description">
+        {{ note.content | markdownify }}  <!-- 显示简介内容 -->
+      </div>
+      <a class="note-pdf-link" href="{{ note.pdf_url }}" target="_blank">[PDF]</a>
+    </div>
+    <hr>
+  {% endfor %}
+</div>
