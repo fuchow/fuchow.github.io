@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Fu Chow's Homepage"
+title                    : "Step From Here"
 title_separator          : "-"
 name                     : &name "Fu Chow"
 description              : &description "A student of SMS"
