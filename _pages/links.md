@@ -5,7 +5,7 @@ layout: single
 ---
 
 ### Internet Resources
-- [Homepage of Prof.Zhang](https://www.zhangjy9610.me/))
+- [Homepage of Prof.Zhang](https://www.zhangjy9610.me/)
 - [Homepage of Tianyang Sun](https://tysunseven.github.io/)
 - [Homepage of Weiyu](https://github.com/Weiyu-USTC/USTCmath-stat)
 - [library Genesis](https://libgen.is/)
