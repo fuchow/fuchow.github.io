@@ -230,7 +230,7 @@ collections:
     permalink: /notes/:path/
   ta:
     output: true
-    permalink: /teaching-assistant/:path/
+    permalink: /ta/:path/
 
 # These settings control how pages and collections are included in the site
 defaults:
