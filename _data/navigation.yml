@@ -8,23 +8,11 @@ main:
   - title: "Discipline Notes"
     url: /notes/
     
-  - title: "Publications"
-    url: /publications/
+  - title: "Teaching Assistant"
+    url: /ta/
 
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
   - title: "CV"
     url: /cv/
-    
-  - title: "Guide"
-    url: /markdown/
+
+  - title: "Links"
+    url: /links/
