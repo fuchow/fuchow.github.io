@@ -1,6 +1,6 @@
 ---
 title: "Teaching Assistant"
-permalink: /teaching-assistant/
+permalink: /ta/
 layout: archive
 ---
 
