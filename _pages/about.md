@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "A brief introduction of myself"
+title: "Fu Chow's Homepage"
 author_profile: true
 redirect_from: 
   - /about/
