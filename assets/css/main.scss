@@ -40,3 +40,22 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+/* ================== 自定义样式 ================== */
+.note-pdfs {
+  margin-top: 1rem;
+
+  .pdf-link {
+    color: $link-color;          /* 使用主题变量（推荐）*/
+    text-decoration: none;
+    margin-right: 1rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* 可选：兼容旧版单个 PDF 链接样式 */
+.note-item a[href$=".pdf"] {
+  @extend .pdf-link;            /* 继承相同样式 */
+}
