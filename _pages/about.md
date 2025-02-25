@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a second year undergraduate student of [School of Mathematics and Science](https://math.ustc.edu.cn/ENGLISH/list.htm), 
+I am a second year undergraduate student of [School of Mathematical Science](https://math.ustc.edu.cn/ENGLISH/list.htm), 
 [University of Science and Technology of China](https://en.ustc.edu.cn/index.htm).
 
 I am interested in Analysis and Equations recently, and I am still exploring more unknown fields to determine the centain directions I will go in. 
