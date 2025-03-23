@@ -3,7 +3,9 @@ title: "Discipline Notes"
 permalink: /notes/
 layout: archive
 ---
+**There exists some mistakes in my notes, please read with caution! All the notes are written by myself, please not priate or disseminate for profits!**
 
+**我的笔记中存在笔误, 请谨慎参考! 所有笔记均由我本人完成, 请不要盗版或以盈利目的传播!**
 {% for note in site.notes %}
   <div class="note-item">
     <h3>{{ note.title }}</h3>
