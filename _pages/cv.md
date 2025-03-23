@@ -8,7 +8,7 @@ layout: single  # 单栏布局
 [Install PDF](/files/cv/my_cv.pdf)  <!-- 替换为你的 CV PDF 路径 -->
 
 ## Education Background
-- **Degree**：Bachlor of Mathematics  
+- **Degree**：Bachelor of Mathematics  
 **School**：University of Science and Technology of China(USTC) 2023 - 2027
 
 ## Skill
