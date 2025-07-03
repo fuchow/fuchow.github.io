@@ -1,0 +1,10 @@
+---
+title: "A note of Probability Theory and Outer Chapter"
+pdf_links:
+  - name: "Inner Chapter"
+    url: "/notes/PROB1.pdf"
+  - name: "Outer Chapter"
+    url: "/notes/PROB2.pdf"
+---
+这是 **概率论** 和 **概率论进阶** 的笔记, 主要参考 **刘党政老师** 的 **简明概率论**. 内篇为基础的概率论, 从离散型到连续型, 最终证明了大数定律和中心极限定理. 
+外篇则涉及较多的统计物理内容, 包括随机矩阵, Ising模型, Curie-Weiss模型和李-杨单位圆定理, 其中的随机矩阵部分由于课堂内容过于深刻因此笔记较为简略. 
