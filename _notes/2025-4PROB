@@ -1,10 +1,12 @@
 ---
 title: "A note of Probability Theory and Outer Chapter"
 pdf_links:
-  - name: "Inner Chapter"
+  - name: "Inner Chapter 1"
     url: "/notes/PROB1.pdf"
-  - name: "Outer Chapter"
+  - name: "Inner Chapter 2"
     url: "/notes/PROB2.pdf"
+  - name: "Outer Chapter"
+    url: "/notes/PROB3.pdf"
 ---
 这是**概率论**和**概率论进阶**的笔记, 主要参考**刘党政老师**的**简明概率论**. 内篇为基础的概率论, 从离散型到连续型, 最终证明了大数定律和中心极限定理. 
 一个极好的参考资料可以在[宗语轩学长的主页](http://home.ustc.edu.cn/~zyx240014/notes.html)中找到.
