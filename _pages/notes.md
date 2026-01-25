@@ -1,5 +1,5 @@
 ---
-title: "Discipline Notes"
+title: "Course Notes"
 permalink: /notes/
 layout: archive
 ---
