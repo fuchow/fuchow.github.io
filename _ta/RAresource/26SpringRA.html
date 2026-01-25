@@ -13,133 +13,161 @@
        全局样式(建议只在这里改样式)
        ========================= -->
   <style>
-    :root {
-      --page-bg: #fffaf0;
-      --border-color: #000;
-      --text-color: #111;
-      --link-color: #06c;
-      --container-width: 1100px;
+  :root {
+    --page-bg: #fffaf0;
+    --border-color: #000;
+    --text-color: #111;
+    --link-color: #06c;
+    --container-width: 1100px;
 
-      --font-title: "SimHei", "黑体", sans-serif;
-      --font-subtitle: "STZhongsong", "华文中宋", "Songti SC", serif;
-      --font-body: "Georgia", "Times New Roman", serif;
-      --font-cn: "SimSun", "新宋体", serif;
-    }
+    --font-title: "SimHei", "黑体", sans-serif;
+    --font-subtitle: "STZhongsong", "华文中宋", "Songti SC", serif;
+    --font-body: "Georgia", "Times New Roman", serif;
+    --font-cn: "SimSun", "新宋体", serif;
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--page-bg);
-      color: var(--text-color);
-      font-family: var(--font-body);
-    }
+    /* 紧凑参数, 统一控制间距 */
+    --space-1: 4px;
+    --space-2: 6px;
+    --space-3: 8px;
+    --space-4: 10px;
+    --space-5: 12px;
+  }
 
-    a:link, a:visited {
-      color: var(--link-color);
-      text-decoration: none;
-    }
-    a:hover, a:active {
-      text-decoration: underline;
-    }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--page-bg);
+    color: var(--text-color);
+    font-family: var(--font-body);
+  }
 
-    .page {
-      width: min(var(--container-width), calc(100% - 24px));
-      margin: 0 auto;
-      border: 2px solid var(--border-color);
-      padding: 12px 18px 24px;
-      box-sizing: border-box;
-    }
+  a:link, a:visited {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+  a:hover, a:active {
+    text-decoration: underline;
+  }
 
-    .center { text-align: center; }
-    .title {
-      font-family: var(--font-title);
-      margin: 18px 0 8px;
-      font-size: 32px;
-      font-weight: 700;
-    }
-    .subtitle {
-      font-family: var(--font-subtitle);
-      margin: 0 0 10px;
-      font-size: 18px;
-      font-weight: 600;
-    }
+  /* 外框更紧凑 */
+  .page {
+    width: min(var(--container-width), calc(100% - 24px));
+    margin: 0 auto;
+    border: 2px solid var(--border-color);
+    padding: var(--space-4) var(--space-5) var(--space-5);
+    box-sizing: border-box;
+  }
 
-    hr.divider {
-      border: none;
-      border-top: 3px solid var(--border-color);
-      margin: 12px 0;
-    }
+  .center { text-align: center; }
 
-    .nav {
-      margin: 10px 0;
-      font-family: var(--font-body);
-    }
-    .nav a {
-      margin-right: 10px;
-      white-space: nowrap;
-    }
+  /* 标题区更紧凑 */
+  .title {
+    font-family: var(--font-title);
+    margin: var(--space-5) 0 var(--space-2);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
 
-    .section-title {
-      font-family: var(--font-title);
-      font-size: 22px;
-      margin: 18px 0 10px;
-    }
+  .subtitle {
+    font-family: var(--font-subtitle);
+    margin: 0 0 var(--space-3);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
 
-    .indent {
-      margin: 6px 0;
-      padding-left: 2em;
-      font-family: var(--font-cn);
-      line-height: 1.7;
-    }
+  /* 分割线更紧凑: 关键是 margin */
+  hr.divider {
+    border: none;
+    border-top: 3px solid var(--border-color);
+    height: 0;
+    margin: var(--space-2) 0;
+  }
 
-    .notice-list {
-      margin: 0;
-      padding-left: 2.4em;
-      font-family: var(--font-cn);
-      line-height: 1.8;
-    }
-    .notice-list li { margin: 6px 0; }
+  /* 导航更紧凑 */
+  .nav {
+    margin: var(--space-2) 0;
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+  .nav a {
+    margin-right: 10px;
+    white-space: nowrap;
+  }
 
-    .tag-important {
-      color: red;
-      font-weight: 700;
-    }
+  /* 各 section 标题间距收紧 */
+  .section-title {
+    font-family: var(--font-title);
+    font-size: 22px;
+    margin: var(--space-5) 0 var(--space-3);
+    line-height: 1.3;
+  }
 
-    /* =========================
-       表格样式(课程安排/习题课)
-       ========================= */
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 10px 0 16px;
-      table-layout: fixed;
-      font-family: var(--font-cn);
-      font-size: 14px;
-    }
-    th, td {
-      border: 2px solid var(--border-color);
-      padding: 6px 8px;
-      vertical-align: middle;
-      word-break: break-word;
-    }
-    th { text-align: center; font-weight: 700; }
+  /* 正文段落更紧凑 */
+  .indent {
+    margin: var(--space-1) 0;
+    padding-left: 2em;
+    font-family: var(--font-cn);
+    line-height: 1.6;
+  }
 
-    .table-wrap {
-      overflow-x: auto;
-    }
+  /* 公告列表更紧凑 */
+  .notice-list {
+    margin: 0;
+    padding-left: 2.2em;
+    font-family: var(--font-cn);
+    line-height: 1.65;
+  }
+  .notice-list li { margin: var(--space-1) 0; }
 
-    .foot {
-      margin-top: 8px;
-      font-family: var(--font-body);
-    }
+  .tag-important {
+    color: red;
+    font-weight: 700;
+  }
 
-    /* 小屏优化 */
-    @media (max-width: 720px) {
-      .title { font-size: 26px; }
-      .subtitle { font-size: 16px; }
-      th, td { font-size: 13px; }
-    }
-  </style>
+  /* =========================
+     表格样式(更紧凑)
+     ========================= */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: var(--space-3) 0 var(--space-4);
+    table-layout: fixed;
+    font-family: var(--font-cn);
+    font-size: 14px;
+  }
+
+  th, td {
+    border: 2px solid var(--border-color);
+    padding: 4px 6px; /* 原来 6px 8px, 这里收紧 */
+    vertical-align: middle;
+    word-break: break-word;
+    line-height: 1.45; /* 行高收紧 */
+  }
+
+  th {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+  }
+
+  /* [top] 区域更紧凑 */
+  .foot {
+    margin-top: var(--space-2);
+    font-family: var(--font-body);
+  }
+
+  /* 小屏优化 */
+  @media (max-width: 720px) {
+    .title { font-size: 26px; }
+    .subtitle { font-size: 16px; }
+    th, td { font-size: 13px; }
+  }
+</style>
 </head>
 
 <body>
