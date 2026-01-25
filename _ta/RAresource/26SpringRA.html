@@ -161,6 +161,22 @@
   }
 
   th { text-align: center; font-weight: 700; }
+    
+  table[aria-label="课程安排"] th,
+  table[aria-label="课程安排"] td { text-align: center; }
+
+  table[aria-label="课程安排"] th:nth-child(4),
+  table[aria-label="课程安排"] td:nth-child(4),
+  table[aria-label="课程安排"] th:nth-child(6),
+  table[aria-label="课程安排"] td:nth-child(6) { text-align: left; }
+
+  table[aria-label="课程安排"] td:nth-child(4),
+  table[aria-label="课程安排"] td:nth-child(6) { padding-left: 14px; }
+
+  table[aria-label="习题课安排"] th,
+  table[aria-label="习题课安排"] td {
+  text-align: center;
+  }
 
   .table-wrap {
     overflow-x: auto;
@@ -324,7 +340,7 @@
               <td>&nbsp;概论, <span style="color: red; font-weight: 700;">分析是极限的艺术!</span>&nbsp;</td>
               <td>&nbsp;<a href="lec1.pdf">第一讲</a>&nbsp;</td>
               <td>&nbsp;无&nbsp;</td>
-              <td rowspan="3">&nbsp;<a href="sol1.pdf">第一周作业答案</a>&nbsp;</td>
+              <td rowspan="3">&nbsp;<a href="sol1.pdf">第一周</a>&nbsp;</td>
             </tr>
 
             <tr>
