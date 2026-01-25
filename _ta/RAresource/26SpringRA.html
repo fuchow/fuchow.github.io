@@ -20,25 +20,30 @@
     --link-color: #06c;
     --container-width: 1100px;
 
-    --font-title: "SimHei", "黑体", sans-serif;
-    --font-subtitle: "STZhongsong", "华文中宋", "Songti SC", serif;
-    --font-body: "Georgia", "Times New Roman", serif;
-    --font-cn: "SimSun", "新宋体", serif;
+    /* 字体(保留原有, 但更贴近你给的"微软雅黑"风格) */
+    --font-title: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体", sans-serif;
+    --font-subtitle: "Microsoft YaHei", "微软雅黑", "STZhongsong", "华文中宋", "Songti SC", serif;
+    --font-body: "Microsoft YaHei", "微软雅黑", "Georgia", "Times New Roman", serif;
+    --font-cn: "Microsoft YaHei", "微软雅黑", "SimSun", "新宋体", serif;
 
-    /* 紧凑参数, 统一控制间距 */
-    --space-1: 4px;
-    --space-2: 6px;
-    --space-3: 8px;
-    --space-4: 10px;
-    --space-5: 12px;
+    /* 统一控制页面内边距, 用于让 hr 顶到边框 */
+    --page-pad-x: 16px;
+    --page-pad-y: 10px;
   }
 
   html, body {
-    margin: 0;
     padding: 0;
     background: var(--page-bg);
     color: var(--text-color);
     font-family: var(--font-body);
+  }
+
+  /* 按你提供的代码: 用 body margin 控制页面四周留白 */
+  body {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   a:link, a:visited {
@@ -49,45 +54,48 @@
     text-decoration: underline;
   }
 
-  /* 外框更紧凑 */
+  /* 外框 */
   .page {
-    width: min(var(--container-width), calc(100% - 24px));
+    width: min(var(--container-width), 100%);
     margin: 0 auto;
     border: 2px solid var(--border-color);
-    padding: var(--space-4) var(--space-5) var(--space-5);
+    padding: var(--page-pad-y) var(--page-pad-x) 18px;
     box-sizing: border-box;
   }
 
   .center { text-align: center; }
 
-  /* 标题区更紧凑 */
+  /* 参考你给的 .title 风格, 但不强制变蓝, 避免和整体不一致
+     如果你希望标题变蓝, 把 color 打开即可 */
   .title {
     font-family: var(--font-title);
-    margin: var(--space-5) 0 var(--space-2);
-    font-size: 32px;
+    margin: 12px 0 6px;
+    font-size: xx-large;
     font-weight: 700;
     line-height: 1.25;
+    /* color: #001AFF; */
   }
 
   .subtitle {
     font-family: var(--font-subtitle);
-    margin: 0 0 var(--space-3);
+    margin: 0 0 8px;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.35;
   }
 
-  /* 分割线更紧凑: 关键是 margin */
+  /* 关键: 分隔线左右顶到边框, 不留空 */
   hr.divider {
     border: none;
     border-top: 3px solid var(--border-color);
     height: 0;
-    margin: var(--space-2) 0;
+    display: block;
+    margin: 6px calc(-1 * var(--page-pad-x));
   }
 
   /* 导航更紧凑 */
   .nav {
-    margin: var(--space-2) 0;
+    margin: 6px 0;
     font-family: var(--font-body);
     line-height: 1.6;
   }
@@ -96,30 +104,27 @@
     white-space: nowrap;
   }
 
-  /* 各 section 标题间距收紧 */
   .section-title {
     font-family: var(--font-title);
     font-size: 22px;
-    margin: var(--space-5) 0 var(--space-3);
+    margin: 14px 0 8px;
     line-height: 1.3;
   }
 
-  /* 正文段落更紧凑 */
   .indent {
-    margin: var(--space-1) 0;
+    margin: 4px 0;
     padding-left: 2em;
     font-family: var(--font-cn);
     line-height: 1.6;
   }
 
-  /* 公告列表更紧凑 */
   .notice-list {
     margin: 0;
     padding-left: 2.2em;
     font-family: var(--font-cn);
     line-height: 1.65;
   }
-  .notice-list li { margin: var(--space-1) 0; }
+  .notice-list li { margin: 4px 0; }
 
   .tag-important {
     color: red;
@@ -127,12 +132,14 @@
   }
 
   /* =========================
-     表格样式(更紧凑)
+     表格样式: 更紧一些
+     你给的代码是 table td 四向 10/20 的 padding, 会偏松.
+     这里我做成更紧凑版本, 但保留"四向分开写"的结构, 方便你以后改.
      ========================= */
   table {
     border-collapse: collapse;
     width: 100%;
-    margin: var(--space-3) 0 var(--space-4);
+    margin: 8px 0 12px;
     table-layout: fixed;
     font-family: var(--font-cn);
     font-size: 14px;
@@ -140,31 +147,52 @@
 
   th, td {
     border: 2px solid var(--border-color);
-    padding: 4px 6px; /* 原来 6px 8px, 这里收紧 */
     vertical-align: middle;
     word-break: break-word;
-    line-height: 1.45; /* 行高收紧 */
+    line-height: 1.45;
   }
 
-  th {
-    text-align: center;
-    font-weight: 700;
+  /* 按你的写法拆开四向 padding, 但数值更紧凑 */
+  table td, table th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
+
+  th { text-align: center; font-weight: 700; }
 
   .table-wrap {
     overflow-x: auto;
   }
 
-  /* [top] 区域更紧凑 */
   .foot {
-    margin-top: var(--space-2);
+    margin-top: 6px;
     font-family: var(--font-body);
   }
 
-  /* 小屏优化 */
+  /* 兼容你给的类名, 如果你 HTML 里有用到就会生效 */
+  .table {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    font-size: large;
+  }
+  .text {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+  }
+  .bib {
+    font-family: "Times New Roman", serif;
+    font-size: large;
+  }
+
   @media (max-width: 720px) {
     .title { font-size: 26px; }
     .subtitle { font-size: 16px; }
+    table td, table th {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
     th, td { font-size: 13px; }
   }
 </style>
