@@ -162,16 +162,41 @@
 
   th { text-align: center; font-weight: 700; }
     
-  table[aria-label="课程安排"] th,
-  table[aria-label="课程安排"] td { text-align: center; }
+ /* 课程安排表: 表头全部居中 */
+table[aria-label="课程安排"] th {
+  text-align: center;
+}
 
-  table[aria-label="课程安排"] th:nth-child(4),
-  table[aria-label="课程安排"] td:nth-child(4),
-  table[aria-label="课程安排"] th:nth-child(6),
-  table[aria-label="课程安排"] td:nth-child(6) { text-align: left; }
+/* 课程安排表: 默认单元格居中 */
+table[aria-label="课程安排"] td {
+  text-align: center;
+}
 
-  table[aria-label="课程安排"] td:nth-child(4),
-  table[aria-label="课程安排"] td:nth-child(6) { padding-left: 14px; }
+/* 课程安排表: "内容"列 td 左对齐
+   - 行有 7 个单元格时: 内容是第 4 个(4th from start, 4th from end)
+   - 行有 6 个单元格且缺周数/或缺答案时: 内容可能是第 3 或第 4 个
+   - 行有 5 个单元格时(周数和答案都被 rowspan 占用): 内容是第 3 个
+*/
+table[aria-label="课程安排"] td:nth-child(4):nth-last-child(4),
+table[aria-label="课程安排"] td:nth-child(4):nth-last-child(3),
+table[aria-label="课程安排"] td:nth-child(3):nth-last-child(4),
+table[aria-label="课程安排"] td:nth-child(3):nth-last-child(3) {
+  text-align: left;
+  padding-left: 14px;
+}
+
+/* 课程安排表: "作业"列 td 左对齐
+   - 行有 7 个单元格时: 作业是第 6 个(2nd from end)
+   - 行有 6 个单元格时: 作业可能是第 5 或第 6 个
+   - 行有 5 个单元格时: 作业是第 5 个(最后一个)
+*/
+table[aria-label="课程安排"] td:nth-child(6):nth-last-child(2),
+table[aria-label="课程安排"] td:nth-child(6):nth-last-child(1),
+table[aria-label="课程安排"] td:nth-child(5):nth-last-child(2),
+table[aria-label="课程安排"] td:nth-child(5):nth-last-child(1) {
+  text-align: left;
+  padding-left: 14px;
+}
 
   table[aria-label="习题课安排"] th,
   table[aria-label="习题课安排"] td {
