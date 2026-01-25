@@ -1,324 +1,336 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <!-- ===== 基本信息（浏览器需要）===== -->
+  <!-- =========================
+       基础信息(按需修改)
+       ========================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>实分析(H)课程主页</title>
+  <meta name="title" content="实分析(H)课程主页" />
 
-  <title>实分析(H) 2026 春季学期</title>
-
-  <!-- ===== 样式（CSS）===== -->
+  <!-- =========================
+       全局样式(建议只在这里改样式)
+       ========================= -->
   <style>
-    /* 你可以把下面这些理解成“配色开关” */
-    :root{
-      --bg: #dfeecf;          /* 页面浅绿色背景 */
-      --border: #111;         /* 外框/表格边框颜色 */
-      --rule: rgba(0,0,0,.20);/* 分隔线（淡） */
-      --link: #0b46ff;        /* 链接蓝色 */
-      --card: rgba(255,255,255,.08); /* 内容底色（很淡） */
+    :root {
+      --page-bg: #fffaf0;
+      --border-color: #000;
+      --text-color: #111;
+      --link-color: #06c;
+      --container-width: 1100px;
+
+      --font-title: "SimHei", "黑体", sans-serif;
+      --font-subtitle: "STZhongsong", "华文中宋", "Songti SC", serif;
+      --font-body: "Georgia", "Times New Roman", serif;
+      --font-cn: "SimSun", "新宋体", serif;
     }
 
-    /* 全局：页面背景、字体、默认文字颜色 */
-    body{
+    html, body {
       margin: 0;
-      background: var(--bg);
-      color: #111;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto,
-                   "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
+      padding: 0;
+      background: var(--page-bg);
+      color: var(--text-color);
+      font-family: var(--font-body);
     }
 
-    /* 页面主体宽度 + 居中 */
-    .page{
-      max-width: 1100px;
+    a:link, a:visited {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    a:hover, a:active {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(var(--container-width), calc(100% - 24px));
       margin: 0 auto;
-      padding: 18px 14px 48px;
+      border: 2px solid var(--border-color);
+      padding: 12px 18px 24px;
+      box-sizing: border-box;
     }
 
-    /* 外框（你截图里那个大边框） */
-    .frame{
-      border: 2px solid var(--border);
-      background: var(--card);
+    .center { text-align: center; }
+    .title {
+      font-family: var(--font-title);
+      margin: 18px 0 8px;
+      font-size: 32px;
+      font-weight: 700;
     }
-
-    /* 顶部标题区 */
-    header{
-      text-align: center;
-      padding: 52px 16px 26px;
-      border-bottom: 2px solid var(--rule);
-    }
-
-    header h1{
-      margin: 0;
-      font-size: 44px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    header .sub{
-      margin-top: 18px;
-      font-size: 20px;
+    .subtitle {
+      font-family: var(--font-subtitle);
+      margin: 0 0 10px;
+      font-size: 18px;
       font-weight: 600;
     }
 
-    /* 导航（方括号链接） */
-    nav{
-      padding: 14px 18px;
-      border-bottom: 2px solid var(--rule);
-      font-size: 18px;
+    hr.divider {
+      border: none;
+      border-top: 3px solid var(--border-color);
+      margin: 12px 0;
     }
-    nav a{
-      color: var(--link);
-      text-decoration: none; /* 去掉下划线 */
+
+    .nav {
+      margin: 10px 0;
+      font-family: var(--font-body);
+    }
+    .nav a {
       margin-right: 10px;
-    }
-    nav a:hover{
-      text-decoration: underline;
+      white-space: nowrap;
     }
 
-    /* 每个版块（课程公告 / 课程信息 / 课程安排 / 习题课） */
-    section{
-      padding: 20px 18px 26px;
-      border-top: 2px solid var(--rule);
+    .section-title {
+      font-family: var(--font-title);
+      font-size: 22px;
+      margin: 18px 0 10px;
     }
 
-    section h2{
-      margin: 0 0 14px;
-      font-size: 34px;
-      font-weight: 900;
+    .indent {
+      margin: 6px 0;
+      padding-left: 2em;
+      font-family: var(--font-cn);
+      line-height: 1.7;
     }
 
-    .note{
-      font-size: 18px;
-      line-height: 1.9;
+    .notice-list {
       margin: 0;
+      padding-left: 2.4em;
+      font-family: var(--font-cn);
+      line-height: 1.8;
     }
+    .notice-list li { margin: 6px 0; }
 
-    /* 信息列表（课程信息部分） */
-    .info{
-      margin: 0;
-      padding-left: 0;
-      list-style: none; /* 去掉圆点 */
-      font-size: 18px;
-      line-height: 2.1;
-    }
-    .info li{
-      margin: 4px 0;
-    }
-    .label{
-      display: inline-block;
-      min-width: 110px; /* 对齐用 */
+    .tag-important {
+      color: red;
       font-weight: 700;
     }
 
-    /* 表格统一风格（课程安排、习题课） */
-    table{
+    /* =========================
+       表格样式(课程安排/习题课)
+       ========================= */
+    table {
+      border-collapse: collapse;
       width: 100%;
-      border-collapse: collapse; /* 边框合并，看起来像一个整体 */
-      margin-top: 14px;
-      font-size: 16px;
-      background: rgba(255,255,255,.16);
+      margin: 10px 0 16px;
+      table-layout: fixed;
+      font-family: var(--font-cn);
+      font-size: 14px;
     }
-    th, td{
-      border: 2px solid var(--border);
-      padding: 10px 10px;
-      vertical-align: top;
+    th, td {
+      border: 2px solid var(--border-color);
+      padding: 6px 8px;
+      vertical-align: middle;
+      word-break: break-word;
     }
-    th{
-      background: rgba(255,255,255,.25);
-      text-align: center;
-      font-weight: 800;
-    }
-    td small{
-      color: rgba(0,0,0,.70);
+    th { text-align: center; font-weight: 700; }
+
+    .table-wrap {
+      overflow-x: auto;
     }
 
-    /* 底部“回到顶部” */
-    .backtop{
-      padding: 14px 18px 18px;
-      border-top: 2px solid var(--rule);
-      font-size: 18px;
-    }
-    .backtop a{
-      color: var(--link);
-      text-decoration: none;
-    }
-    .backtop a:hover{
-      text-decoration: underline;
+    .foot {
+      margin-top: 8px;
+      font-family: var(--font-body);
     }
 
-    /* 简单的移动端适配：屏幕窄时标题变小 */
-    @media (max-width: 600px){
-      header h1{ font-size: 30px; }
-      section h2{ font-size: 26px; }
-      nav{ font-size: 16px; }
+    /* 小屏优化 */
+    @media (max-width: 720px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 16px; }
+      th, td { font-size: 13px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <div class="frame" id="top">
-      <!-- ===== 页头 ===== -->
-      <header>
-        <h1>实分析(H) 2026 春季学期</h1>
-        <div class="sub">中国科学技术大学 数学科学学院</div>
-      </header>
+  <!-- 顶部锚点, 用于"回到顶部" -->
+  <a id="top"></a>
 
-      <!-- ===== 导航（点击跳转到页面某个位置）===== -->
-      <nav>
-        <!-- href="#ann" 表示跳转到 id="ann" 的位置 -->
-        <a href="#ann">[课程公告]</a>
+  <div class="page">
+    <!-- =========================
+         页面头部(标题区)
+         ========================= -->
+    <header class="center">
+      <!-- 课程标题(按需修改) -->
+      <h1 class="title">实分析(H) 2026 春季学期</h1>
+
+      <!-- 学院信息(按需修改) -->
+      <div class="subtitle">
+        中国科学技术大学 数学科学学院
+      </div>
+
+      <hr class="divider" />
+
+      <!-- 导航(按需增删链接) -->
+      <nav class="nav">
+        <a href="#anno">[课程公告]</a>
         <a href="#info">[课程信息]</a>
-        <a href="#schedule">[课程安排]</a>
-        <a href="#tutorial">[习题课]</a>
+        <a href="#notes">[课程安排]</a>
+        <a href="#ex">[习题课]</a>
       </nav>
 
-      <!-- ===== 课程公告 ===== -->
-      <section id="ann">
-        <h2>课程公告</h2>
-        <p class="note">
-          欢迎大家修读本课程! 本网页内容会根据教学进度实时更新.<br/>
-          <!-- <br/> 是换行；你也可以用多个段落 <p> 来分段 -->
+      <hr class="divider" />
+    </header>
 
-        </p>
-      </section>
+    <!-- =========================
+         课程公告
+         ========================= -->
+    <section id="anno">
+      <h2 class="section-title">课程公告</h2>
 
-      <!-- ===== 课程信息 ===== -->
-      <section id="info">
-        <h2>课程信息</h2>
+      <!-- 说明文本(按需修改) -->
+      <p class="indent">欢迎大家修读任老师的实分析(H)课程! 本网站内容将根据教学进度实时更新.</p>
 
-        <ul class="info">
-          <li><span class="label">授课老师: </span>任广斌</li>
-          <li><span class="label">上课时间: </span>周一(1, 2), 周三(3, 4, 5)</li>
-          <li><span class="label">上课地点: </span>第五教学楼 5102</li>
-          <li><span class="label">助教: </span>周芾(Fu Chow)</li>
-          <li><span class="label">答疑/习题课: </span>待定</li>
-          <li><span class="label">教材: </span>实变函数论(第三版) 周民强</li>
-        </ul>
-      </section>
+      <!--
+        公告维护方式建议:
+        1) 用 <ul><li> 维护, 便于增删
+        2) 最新公告放最上面
+        3) 日期格式统一为 MM/DD 或 YYYY-MM-DD
+      -->
+      <ul class="notice-list">
+        <li><b>01/25</b> 课程主页已建立, 课程尚未开始, 同学们假期愉快!</li>
+        
+      </ul>
 
-      <!-- ===== 课程安排 ===== -->
-      <section id="schedule">
-        <h2>课程安排</h2>
+      <p class="foot"><a href="#top">[top]</a></p>
 
-        <p class="note">
-          PPT<br/>
-          作业提交: 待定<br/>
-          作业评分: 待定
-        </p>
+      <hr class="divider" />
+    </section>
 
-        <table>
+    <!-- =========================
+         课程信息
+         ========================= -->
+    <section id="info">
+      <h2 class="section-title">课程信息</h2>
+
+      <!--
+        课程信息建议用段落逐条维护:
+        - 左侧加粗的是字段名
+        - 右侧是内容
+      -->
+      <p class="indent"><b>授课老师:</b> 任广斌</p>
+      <p class="indent"><b>上课时间:</b> 1 (1,2), 3 (3,4,5)</p>
+      <p class="indent"><b>上课地点:</b> 第五教学楼 5102</p>
+
+      <!-- 原始内容里 span 没有闭合, 这里已修正 -->
+      <p class="indent"><b>分组(学号尾号):</b> 待定</p>
+      <p class="indent"><b>助教:</b> 周芾(zf010309@mail.ustc.edu.cn</p>
+      <p class="indent"><b>答疑/习题课时间:</b> 待定</p>
+      <p class="indent"><b>成绩计算:</b> 待定</p>
+      <p class="indent"><b>教材:</b> 实变函数论(第三版) 周民强</p>
+
+      <hr class="divider" />
+    </section>
+
+    <!-- =========================
+         课程安排
+         ========================= -->
+    <section id="notes">
+      <h2 class="section-title">课程安排</h2>
+
+      <p class="indent">课程的讲义将在课后上传.</p>
+      <p class="indent">
+        作业提交要求: 待定
+      </p>
+      <p class="indent">
+        作业评分: 待定
+      </p>
+      <p class="indent">作业答案将于该周作业提交截止后公布.</p>
+      <p class="indent">布置重复的题目写一次即可; 上课讲过但布置成作业的题目也要写一遍.</p>
+
+      <!--
+        课程安排表维护提示:
+        1) 每一讲对应一行 <tr>...</tr>
+        2) 周数合并单元格使用 rowspan, 改动时注意同步调整 rowspan 的数字
+        3) 讲义/答案链接直接改 href, 文本可随意改
+      -->
+      <div class="table-wrap">
+        <table aria-label="课程安排">
           <thead>
             <tr>
-              <th style="width: 70px;">周数</th>
-              <th style="width: 70px;">课节</th>
-              <th style="width: 110px;">日期</th>
-              <th>内容（助教概括）</th>
-              <th style="width: 120px;">PPT</th>
-              <th style="width: 180px;">作业</th>
-              <th style="width: 160px;">答案</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <!-- 一行就是一个 <tr>；每格是 <td> -->
-            <tr>
-              <td>一</td>
-              <td>1</td>
-              <td>9月8日</td>
-              <td>行列式定义回顾；Laplace 展开定理</td>
-              <td><a href="materials/ch2.pdf">第二章</a></td>
-              <td>无</td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td>一</td>
-              <td>2</td>
-              <td>9月10日</td>
-              <td>行列式的计算（以例题为主）</td>
-              <td></td>
-              <td>P66 5,8,9；P86 2</td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td>二</td>
-              <td>3</td>
-              <td>9月15日</td>
-              <td>矩阵的相关概念与性质</td>
-              <td><a href="materials/ch3.pdf">第三章</a></td>
-              <td>P83 1(5),(19)；P98 3,9,18</td>
-              <td><a href="solutions/hw01-02.pdf">第1-2周作业答案</a></td>
-            </tr>
-
-            <tr>
-              <td>二</td>
-              <td>4</td>
-              <td>9月17日</td>
-              <td>矩阵的计算、打洞（以例题为主）</td>
-              <td></td>
-              <td>P87 6；P104 4(3),(4),7,10</td>
-              <td></td>
-            </tr>
-
-            <!-- 你可以继续往下复制 <tr>...</tr> 来增加行 -->
-          </tbody>
-        </table>
-
-        <p class="note" style="margin-top:12px;">
-          <small>提示：上面链接是示例。你把对应 PDF 放进同目录的 materials/ 或 solutions/ 文件夹，就能点开。</small>
-        </p>
-      </section>
-
-      <!-- ===== 习题课 ===== -->
-      <section id="tutorial">
-        <h2>习题课</h2>
-
-        <p class="note">
-          习题课的实际时间请关注群公告。讲义将在习题课后上传。
-        </p>
-
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 220px;">场次</th>
-              <th style="width: 180px;">时间</th>
-              <th style="width: 120px;">地点</th>
-              <th>讲义</th>
+              <th style="width: 7%;">周数</th>
+              <th style="width: 7%;">课节</th>
+              <th style="width: 10%;">日期</th>
+              <th style="width: 26%;">内容</th>
+              <th style="width: 12%;">讲义</th>
+              <th style="width: 28%;">作业</th>
+              <th style="width: 10%;">答案</th>
             </tr>
           </thead>
 
           <tbody>
             <tr>
-              <td>1（by 助教A）</td>
-              <td>10月12日 15:00</td>
-              <td>5503</td>
-              <td><a href="tutorials/tutorial1.pdf">第一次习题课讲义</a></td>
+              <td rowspan="3">&nbsp;一&nbsp;</td>
+              <td>&nbsp;1&nbsp;</td>
+              <td>&nbsp;02/26&nbsp;</td>
+              <td>&nbsp;三维向量的五种运算&nbsp;</td>
+              <td>&nbsp;<a href="B2lec_notes/第一讲.pdf">第一讲</a>&nbsp;</td>
+              <td>&nbsp;习题8.1: 6,9,10,12,14,17,23,26&nbsp;</td>
+              <td rowspan="3">&nbsp;<a href="B2_ans/第一周作业答案.pdf">01</a>&nbsp;</td>
             </tr>
 
             <tr>
-              <td>2（by 助教B）</td>
-              <td>10月26日 15:00</td>
-              <td>5503</td>
-              <td></td>
+              <td>&nbsp;2&nbsp;</td>
+              <td>&nbsp;02/28&nbsp;</td>
+              <td>&nbsp;空间的平面与直线&nbsp;</td>
+              <td>&nbsp;<a href="B2lec_notes/第二讲.pdf">第二讲</a>&nbsp;</td>
+              <td>&nbsp;习题8.2: 1,2,3,6,7,14(1),15(1),16&nbsp;</td>
             </tr>
 
             <tr>
-              <td>3（by 助教B）</td>
-              <td>11月09日 15:00</td>
-              <td>5503</td>
-              <td><a href="tutorials/tutorial3.pdf">第三次习题课讲义</a></td>
+              <td>&nbsp;3&nbsp;</td>
+              <td>&nbsp;03/01&nbsp;</td>
+              <td>&nbsp;空间的向量, 直线, 平面习题课&nbsp;</td>
+              <td>&nbsp;<a href="B2lec_notes/第三讲.pdf">第三讲</a>&nbsp;</td>
+              <td>&nbsp;习题8.2: 18(1),19(1),20(2),21(1),22(1),23(1),29,30&nbsp;</td>
             </tr>
           </tbody>
         </table>
-      </section>
-
-      <!-- ===== 回到顶部 ===== -->
-      <div class="backtop">
-        <a href="#top">[回到顶部]</a>
       </div>
-    </div>
+
+      <hr class="divider" />
+    </section>
+
+    <!-- =========================
+         习题课
+         ========================= -->
+    <section id="ex">
+      <h2 class="section-title">习题课</h2>
+
+      <p class="indent">习题课的实际时间请关注群公告.</p>
+      <p class="indent">讲义将在习题课前后上传.</p>
+
+      <!--
+        习题课表维护提示:
+        - 新增一行: 复制一个 <tr> 块, 修改序号/时间/地点/链接
+        - 没有讲义就留空或写"待更新"
+      -->
+      <div class="table-wrap">
+        <table aria-label="习题课安排">
+          <thead>
+            <tr>
+              <th style="width: 10%;">序号</th>
+              <th style="width: 25%;">时间</th>
+              <th style="width: 20%;">地点</th>
+              <th style="width: 45%;">讲义</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>&nbsp;1&nbsp;</td>
+              <td>&nbsp;03/09 09:00&nbsp;</td>
+              <td>&nbsp;2105&nbsp;</td>
+              <td>&nbsp;<a href="exerciseclass/第一次习题课讲义.pdf">第一次习题课讲义</a>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="divider" />
+
+      <p class="foot"><a href="#top">[回到顶部]</a></p>
+    </section>
   </div>
 </body>
 </html>
