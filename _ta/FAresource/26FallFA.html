@@ -3,306 +3,234 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>泛函分析课程主页 · 2026 秋季</title>
-  <meta name="description" content="中国科学技术大学数学科学学院 2026 秋季泛函分析课程主页。">
+  <title>泛函分析课程主页 · 2026 秋季学期（拟）</title>
+  <meta name="description" content="中国科学技术大学数学科学学院 2026 秋季学期（拟） 泛函分析课程主页。">
   <link rel="canonical" href="https://fuchow.github.io/ta/FAresource/26FallFA.html">
-  <meta property="og:title" content="泛函分析课程主页 · 2026 秋季">
+  <meta property="og:title" content="泛函分析课程主页 · 2026 秋季学期（拟）">
   <meta property="og:description" content="课程公告、课程安排、习题课与公开课程资料。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fuchow.github.io/ta/FAresource/26FallFA.html">
   <style>
-    :root {
-      --page: #f5f4f0;
-      --paper: #fff;
-      --ink: #24272a;
-      --muted: #697177;
-      --navy: #163e59;
-      --navy-soft: #edf2f5;
-      --accent: #a4473f;
-      --rule: #d7d7d2;
-      --rule-dark: #aeb5b9;
-      --serif: "Noto Serif SC", "Songti SC", STSong, Georgia, serif;
-      --sans: Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-    }
+:root {
+  --page: #f5f4f0;
+  --paper: #fff;
+  --ink: #24272a;
+  --muted: #697177;
+  --navy: #163e59;
+  --navy-soft: #edf2f5;
+  --accent: #a4473f;
+  --rule: #d7d7d2;
+  --rule-dark: #aeb5b9;
+  --serif: "Noto Serif SC", "Songti SC", STSong, Georgia, serif;
+  --sans: Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--page);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: 15px;
-      line-height: 1.75;
-    }
-    a { color: var(--navy); text-decoration: none; }
-    a:hover { color: var(--accent); }
-    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.75;
+}
+a { color: var(--navy); text-decoration: none; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-    .page {
-      width: min(1100px, calc(100% - 32px));
-      margin: 28px auto;
-      background: var(--paper);
-      border: 1px solid var(--rule);
-    }
+.page {
+  width: min(1100px, calc(100% - 32px));
+  margin: 28px auto;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
 
-    .masthead { padding: 26px 44px 0; }
-    .university-line {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--navy);
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: .04em;
-    }
-    .title-block { padding: 35px 0 29px; text-align: center; }
-    .title-block p { margin: 0 0 6px; color: var(--accent); font-size: 12px; font-weight: 650; letter-spacing: .08em; }
-    .title-block h1 { margin: 0; color: var(--navy); font: 700 clamp(34px, 5vw, 48px)/1.2 var(--serif); letter-spacing: .08em; }
-    .title-block div { margin-top: 7px; color: var(--muted); font: italic 400 19px/1.4 Georgia, serif; letter-spacing: .04em; }
-    .masthead nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 12px 6px;
-      border-top: 3px double var(--rule-dark);
-      border-bottom: 1px solid var(--rule);
-      font-size: 13px;
-    }
-    .masthead nav a { padding: 2px 17px; border-right: 1px solid var(--rule); }
-    .masthead nav a:last-child { border-right: 0; }
+.masthead { padding: 26px 44px 0; }
+.university-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--navy);
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .04em;
+}
+.title-block { padding: 35px 0 29px; text-align: center; }
+.title-block p { margin: 0 0 6px; color: var(--accent); font-size: 12px; font-weight: 650; letter-spacing: .08em; }
+.title-block h1 { margin: 0; color: var(--navy); font: 700 clamp(34px, 5vw, 48px)/1.2 var(--serif); letter-spacing: .08em; }
+.title-block div { margin-top: 7px; color: var(--muted); font: italic 400 19px/1.4 Georgia, serif; letter-spacing: .04em; }
+.masthead nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 12px 6px;
+  border-top: 3px double var(--rule-dark);
+  border-bottom: 1px solid var(--rule);
+  font-size: 13px;
+}
+.masthead nav a { padding: 2px 17px; border-right: 1px solid var(--rule); }
+.masthead nav a:last-child { border-right: 0; }
 
-    main { padding: 0 44px 34px; }
-    .intro {
-      margin: 30px 0 8px;
-      padding: 18px 22px;
-      border-left: 3px solid var(--navy);
-      background: var(--navy-soft);
-    }
-    .intro p { margin: 0; }
-    .intro-note { margin-top: 4px !important; color: var(--muted); font-size: 12px; }
+main { padding: 0 44px 34px; }
+.intro {
+  margin: 30px 0 8px;
+  padding: 18px 22px;
+  border-left: 3px solid var(--navy);
+  background: var(--navy-soft);
+}
+.intro p { margin: 0; }
+.intro-note { margin-top: 4px !important; color: var(--muted); font-size: 12px; }
 
-    .content-section { padding-top: 38px; scroll-margin-top: 16px; }
-    .section-title {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 18px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--navy);
-    }
-    .section-title h2 { margin: 0; color: var(--navy); font: 700 24px/1.35 var(--serif); letter-spacing: .04em; }
-    .section-title span { color: var(--muted); font: italic 400 12px/1 Georgia, serif; letter-spacing: .03em; }
+.content-section { padding-top: 38px; scroll-margin-top: 16px; }
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--navy);
+}
+.section-title h2 { margin: 0; color: var(--navy); font: 700 24px/1.35 var(--serif); letter-spacing: .04em; }
+.section-title span { color: var(--muted); font: italic 400 12px/1 Georgia, serif; letter-spacing: .03em; }
 
-    .notice-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
-    .notice-list li { display: grid; grid-template-columns: 70px 1fr; border-bottom: 1px solid var(--rule); }
-    .notice-list time { padding: 12px 12px 12px 0; color: var(--muted); font: 600 12px/1.7 var(--sans); }
-    .notice-list p { margin: 0; padding: 12px 0; }
-    .notice-list .important time { color: var(--accent); }
-    .notice-list .important p { font-weight: 600; }
+.notice-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
+.notice-list li { display: grid; grid-template-columns: 70px 1fr; border-bottom: 1px solid var(--rule); }
+.notice-list time { padding: 12px 12px 12px 0; color: var(--muted); font: 600 12px/1.7 var(--sans); }
+.notice-list p { margin: 0; padding: 12px 0; }
+.notice-list .important time { color: var(--accent); }
+.notice-list .important p { font-weight: 600; }
 
-    .info-grid { margin: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
-    .info-grid > div { min-height: 56px; display: grid; grid-template-columns: 115px 1fr; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-    .info-grid dt { padding: 14px 16px; background: #f7f7f5; color: #4c5459; font-weight: 650; }
-    .info-grid dd { margin: 0; padding: 14px 16px; }
+.info-grid { margin: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+.info-grid > div { min-height: 56px; display: grid; grid-template-columns: 115px 1fr; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.info-grid dt { padding: 14px 16px; background: #f7f7f5; color: #4c5459; font-weight: 650; }
+.info-grid dd { margin: 0; padding: 14px 16px; }
 
-    .prose-note, .section-copy { color: #4f575c; font-size: 13px; }
-    .prose-note { margin-bottom: 16px; padding: 11px 14px; background: #faf9f6; border: 1px solid var(--rule); }
-    .prose-note p { margin: 0; }
-    .prose-note p + p { margin-top: 3px; }
-    .section-copy { margin: -4px 0 16px; }
+.prose-note, .section-copy { color: #4f575c; font-size: 13px; }
+.prose-note { margin-bottom: 16px; padding: 11px 14px; background: #faf9f6; border: 1px solid var(--rule); }
+.prose-note p { margin: 0; }
+.prose-note p + p { margin-top: 3px; }
+.section-copy { margin: -4px 0 16px; }
 
-    .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--rule-dark); }
-    table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 13px; }
-    th, td { padding: 10px 12px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); vertical-align: middle; }
-    th:last-child, td:last-child { border-right: 0; }
-    tbody tr:last-child td { border-bottom: 0; }
-    thead th { background: var(--navy); color: white; font-weight: 600; text-align: center; }
-    tbody td:first-child, tbody td:nth-last-child(-n+3) { text-align: center; white-space: nowrap; }
-    tbody tr:nth-child(even) { background: #fafafa; }
-    tbody tr:hover { background: var(--navy-soft); }
+.table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--rule-dark); }
+table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 13px; }
+th, td { padding: 10px 12px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); vertical-align: middle; }
+th:last-child, td:last-child { border-right: 0; }
+tbody tr:last-child td { border-bottom: 0; }
+thead th { background: var(--navy); color: white; font-weight: 600; text-align: center; }
+tbody td:first-child, tbody td:nth-last-child(-n+3) { text-align: center; white-space: nowrap; }
+tbody tr:nth-child(even) { background: #fafafa; }
+tbody tr:hover { background: var(--navy-soft); }
 
-    .resource-list { border-top: 1px solid var(--rule); }
-    .resource-row {
-      display: grid;
-      grid-template-columns: 54px 1fr auto;
-      gap: 16px;
-      align-items: center;
-      padding: 16px 4px;
-      border-bottom: 1px solid var(--rule);
-    }
-    .resource-no { color: var(--accent); font: 600 12px/1 var(--sans); }
-    .resource-row strong, .resource-row small { display: block; }
-    .resource-row strong { font: 650 16px/1.4 var(--serif); }
-    .resource-row small { margin-top: 2px; color: var(--muted); font-size: 12px; }
-    .resource-status { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.resource-list { border-top: 1px solid var(--rule); }
+.resource-empty { margin: 0; padding: 18px 4px; border-bottom: 1px solid var(--rule); color: var(--muted); font-size: 13px; }
+.resource-list > a {
+  display: grid;
+  grid-template-columns: 54px 1fr 28px;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+}
+.resource-list > a:hover { background: #faf9f6; color: var(--navy); }
+.resource-no { color: var(--accent); font: 600 12px/1 var(--sans); }
+.resource-list strong, .resource-list small { display: block; }
+.resource-list strong { font: 650 16px/1.4 var(--serif); }
+.resource-list small { margin-top: 2px; color: var(--muted); font-size: 12px; }
+.external { color: var(--navy); font-size: 16px; }
 
-    footer {
-      min-height: 82px;
-      padding: 22px 44px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      border-top: 1px solid var(--rule);
-      background: #fafafa;
-      color: var(--muted);
-      font-size: 11px;
-    }
-    footer p { margin: 0; }
-    footer div { display: flex; flex-wrap: wrap; gap: 20px; }
+footer {
+  min-height: 82px;
+  padding: 22px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid var(--rule);
+  background: #fafafa;
+  color: var(--muted);
+  font-size: 11px;
+}
+footer p { margin: 0; }
+footer div { display: flex; flex-wrap: wrap; gap: 20px; }
 
-    @media (max-width: 760px) {
-      .page { width: 100%; margin: 0; border: 0; }
-      .masthead { padding: 20px 20px 0; }
-      .university-line { display: block; text-align: center; }
-      .university-line span { display: block; }
-      .university-line span + span { margin-top: 3px; }
-      .title-block { padding: 29px 0 24px; }
-      .masthead nav { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
-      .masthead nav a { flex: 0 0 auto; padding: 2px 13px; }
-      main { padding: 0 20px 28px; }
-      .intro { margin-top: 24px; }
-      .info-grid { grid-template-columns: 1fr; }
-      .section-title { display: block; }
-      .section-title span { display: block; margin-top: 3px; }
-      footer { padding: 20px; align-items: flex-start; flex-direction: column; }
-    }
+@media (max-width: 760px) {
+  .page { width: 100%; margin: 0; border: 0; }
+  .masthead { padding: 20px 20px 0; }
+  .university-line { display: block; text-align: center; }
+  .university-line span { display: block; }
+  .university-line span + span { margin-top: 3px; }
+  .title-block { padding: 29px 0 24px; }
+  .masthead nav { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+  .masthead nav a { flex: 0 0 auto; padding: 2px 13px; }
+  main { padding: 0 20px 28px; }
+  .intro { margin-top: 24px; }
+  .info-grid { grid-template-columns: 1fr; }
+  .section-title { display: block; }
+  .section-title span { display: block; margin-top: 3px; }
+  footer { padding: 20px; align-items: flex-start; flex-direction: column; }
+}
 
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-    }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
   </style>
 </head>
 <body>
   <div class="page" id="top">
     <header class="masthead">
-      <div class="university-line">
-        <span>中国科学技术大学 · 数学科学学院</span>
-        <span>School of Mathematical Sciences · USTC</span>
-      </div>
-      <div class="title-block">
-        <p>2026 秋季学期（拟）</p>
-        <h1>泛函分析</h1>
-        <div>Functional Analysis</div>
-      </div>
+      <div class="university-line"><span>中国科学技术大学 · 数学科学学院</span><span>School of Mathematical Sciences · USTC</span></div>
+      <div class="title-block"><p>2026 秋季学期（拟）</p><h1>泛函分析</h1><div>Functional Analysis</div></div>
       <nav aria-label="课程页面导航">
-        <a href="https://fuchow.github.io/">个人主页</a>
-        <a href="#announcements">课程公告</a>
-        <a href="#information">课程信息</a>
-        <a href="#schedule">课程安排</a>
-        <a href="#recitations">习题课</a>
-        <a href="#materials">课程资料</a>
+        <a href="https://fuchow.github.io/">个人主页</a><a href="#announcements">课程公告</a><a href="#information">课程信息</a><a href="#schedule">课程安排</a><a href="#recitations">习题课</a><a href="#materials">课程资料</a>
       </nav>
     </header>
-
     <main>
-      <section class="intro">
-        <p>欢迎访问泛函分析课程主页。本页面用于发布课程公告、课程安排、作业答案与习题课讲义，内容将根据教学进度持续更新。</p>
-        <p class="intro-note">当前页面为课程筹备版本；所有尚未确认的教学信息均明确标为“待定”。</p>
-      </section>
-
+      <section class="intro"><p>欢迎访问泛函分析课程主页。本页面用于发布课程公告、课程安排、作业答案与习题课讲义，内容将根据教学进度持续更新。</p><p class="intro-note">本页由课程数据自动生成；仅指定为公开版本的资料会出现在这里。</p></section>
       <section class="content-section" aria-labelledby="announcements-heading">
-        <div class="section-title" id="announcements">
-          <h2 id="announcements-heading">课程公告</h2>
-          <span>Announcements</span>
-        </div>
+        <div class="section-title" id="announcements"><h2 id="announcements-heading">课程公告</h2><span>Announcements</span></div>
         <ol class="notice-list">
-          <li class="important"><time datetime="2026-07-19">07/19</time><p>泛函分析课程主页开始筹备。正式课程信息将在教务安排确认后更新。</p></li>
-          <li><time>待定</time><p>作业、答案与习题课讲义将按教学进度上传；最新资料会在本页标注发布日期。</p></li>
-          <li><time>说明</time><p>如发现讲义或解答中的笔误，欢迎通过邮件反馈。</p></li>
+          <li class="important"><time datetime="2026-07-19">07/19</time><p>泛函分析课程主页与资料仓库开始筹备。正式课程信息将在教务安排确认后更新。</p></li>
+          <li><time datetime="2026-07-19">说明</time><p>如发现讲义或解答中的笔误，欢迎通过 GitHub Issues 或邮件反馈。</p></li>
         </ol>
       </section>
-
       <section class="content-section" aria-labelledby="information-heading">
-        <div class="section-title" id="information">
-          <h2 id="information-heading">课程信息</h2>
-          <span>Course information</span>
-        </div>
+        <div class="section-title" id="information"><h2 id="information-heading">课程信息</h2><span>Course information</span></div>
         <dl class="info-grid">
-          <div><dt>授课教师</dt><dd>待教务信息确认</dd></div>
-          <div><dt>上课时间</dt><dd>待教务信息确认</dd></div>
-          <div><dt>上课地点</dt><dd>待教务信息确认</dd></div>
+          <div><dt>授课教师</dt><dd>黄文</dd></div>
+          <div><dt>上课时间</dt><dd>2(3,4); 4(6,7)</dd></div>
+          <div><dt>上课地点</dt><dd>2506</dd></div>
           <div><dt>课程助教</dt><dd>周芾</dd></div>
-          <div><dt>答疑 / 习题课</dt><dd>时间、地点待定</dd></div>
+          <div><dt>答疑 / 习题课</dt><dd>待定</dd></div>
           <div><dt>联系邮箱</dt><dd><a href="mailto:zf010309@mail.ustc.edu.cn">zf010309@mail.ustc.edu.cn</a></dd></div>
-          <div><dt>课程教材</dt><dd>待授课教师确认</dd></div>
-          <div><dt>资料发布</dt><dd>按教学进度在本页公开</dd></div>
+          <div><dt>课程教材</dt><dd>泛函分析讲义(张恭庆, 林源渠)</dd></div>
         </dl>
       </section>
-
       <section class="content-section" aria-labelledby="schedule-heading">
-        <div class="section-title" id="schedule">
-          <h2 id="schedule-heading">课程安排</h2>
-          <span>Course schedule</span>
-        </div>
-        <div class="prose-note">
-          <p>以下主题顺序为初步规划，具体周次、讲义和作业编号将随正式教学安排调整。</p>
-          <p><strong>资料发布：</strong>题目发布后在本表更新；参考答案原则上在截止时间之后公开。</p>
-        </div>
-        <div class="table-wrap">
-          <table aria-label="泛函分析课程安排">
-            <thead><tr><th>周次</th><th>课程内容</th><th>讲义</th><th>作业</th><th>答案</th></tr></thead>
-            <tbody>
-              <tr><td>1–2</td><td>赋范线性空间与 Banach 空间</td><td>待发布</td><td>HW 01</td><td>—</td></tr>
-              <tr><td>3</td><td>有界线性算子与对偶空间</td><td>待发布</td><td>HW 02</td><td>—</td></tr>
-              <tr><td>4</td><td>Hahn–Banach 定理及其应用</td><td>待发布</td><td>HW 03</td><td>—</td></tr>
-              <tr><td>5–6</td><td>Baire 纲定理、一致有界原理</td><td>待发布</td><td>HW 04</td><td>—</td></tr>
-              <tr><td>7</td><td>开映射定理与闭图像定理</td><td>待发布</td><td>HW 05</td><td>—</td></tr>
-              <tr><td>8–9</td><td>Hilbert 空间、正交投影与 Riesz 表示</td><td>待发布</td><td>HW 06</td><td>—</td></tr>
-              <tr><td>10–11</td><td>紧算子与谱理论初步</td><td>待发布</td><td>HW 07</td><td>—</td></tr>
-              <tr><td>12–13</td><td>弱拓扑、弱收敛与 Banach–Alaoglu</td><td>待发布</td><td>HW 08</td><td>—</td></tr>
-              <tr><td>14–15</td><td>自反性与典型函数空间</td><td>待发布</td><td>HW 09</td><td>—</td></tr>
-              <tr><td>16</td><td>复习与专题选讲</td><td>待发布</td><td>—</td><td>—</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <div class="section-title" id="schedule"><h2 id="schedule-heading">课程安排</h2><span>Course schedule</span></div>
+        <div class="prose-note"><p>课程内容与资料链接以本表为准。</p><p><strong>资料发布：</strong>题目和参考答案上传为正式公开文件后，本页会自动更新。</p></div>
+        <div class="table-wrap"><table aria-label="泛函分析课程安排"><thead><tr><th>周次</th><th>课程内容</th><th>讲义</th><th>作业</th><th>答案</th></tr></thead><tbody>
+              <tr><td>1</td><td>完备性</td><td>待发布</td><td>HW 01</td><td>—</td></tr>
+        </tbody></table></div>
       </section>
-
       <section class="content-section" aria-labelledby="recitations-heading">
-        <div class="section-title" id="recitations">
-          <h2 id="recitations-heading">习题课</h2>
-          <span>Recitation sessions</span>
-        </div>
-        <p class="section-copy">习题课将围绕核心定理、典型例题和常见错误展开；讲义在课后上传。</p>
-        <div class="table-wrap">
-          <table aria-label="泛函分析习题课安排">
-            <thead><tr><th>序号</th><th>时间</th><th>地点</th><th>内容</th><th>讲义</th></tr></thead>
-            <tbody>
+        <div class="section-title" id="recitations"><h2 id="recitations-heading">习题课</h2><span>Recitation sessions</span></div>
+        <p class="section-copy">习题课将围绕核心定理、典型例题和常见错误展开；讲义在上传后自动公开。</p>
+        <div class="table-wrap"><table aria-label="泛函分析习题课安排"><thead><tr><th>序号</th><th>时间</th><th>地点</th><th>内容</th><th>讲义</th></tr></thead><tbody>
               <tr><td>01</td><td>待定</td><td>待定</td><td>赋范空间中的典型例题</td><td>待发布</td></tr>
-              <tr><td>02</td><td>待定</td><td>待定</td><td>Hahn–Banach 与对偶技巧</td><td>待发布</td></tr>
-              <tr><td>03</td><td>待定</td><td>待定</td><td>三大基本定理综合练习</td><td>待发布</td></tr>
-              <tr><td>04</td><td>待定</td><td>待定</td><td>Hilbert 空间与正交展开</td><td>待发布</td></tr>
-              <tr><td>05</td><td>待定</td><td>待定</td><td>紧算子与谱理论例题</td><td>待发布</td></tr>
-              <tr><td>06</td><td>待定</td><td>待定</td><td>弱收敛与期末复习</td><td>待发布</td></tr>
-            </tbody>
-          </table>
-        </div>
+        </tbody></table></div>
       </section>
-
       <section class="content-section" aria-labelledby="materials-heading">
-        <div class="section-title" id="materials">
-          <h2 id="materials-heading">课程资料</h2>
-          <span>Course materials</span>
-        </div>
+        <div class="section-title" id="materials"><h2 id="materials-heading">课程资料</h2><span>Course materials</span></div>
         <div class="resource-list">
-          <div class="resource-row"><span class="resource-no">01</span><span><strong>作业与解答</strong><small>题目、参考解答与勘误</small></span><span class="resource-status">待发布</span></div>
-          <div class="resource-row"><span class="resource-no">02</span><span><strong>习题课讲义</strong><small>每次习题课的讲义与补充材料</small></span><span class="resource-status">待发布</span></div>
-          <div class="resource-row"><span class="resource-no">03</span><span><strong>补充笔记</strong><small>证明细节、背景材料与专题笔记</small></span><span class="resource-status">待发布</span></div>
-          <div class="resource-row"><span class="resource-no">04</span><span><strong>参考资料</strong><small>教材、公开讲义和外部资源索引</small></span><span class="resource-status">待发布</span></div>
+          <p class="resource-empty">目前尚无公开资料；新资料将在上传后自动出现在这里。</p>
         </div>
       </section>
     </main>
-
-    <footer>
-      <p>Functional Analysis · 2026</p>
-      <div>
-        <a href="https://fuchow.github.io/">个人主页</a>
-        <a href="mailto:zf010309@mail.ustc.edu.cn">联系助教</a>
-        <a href="#top">回到顶部 ↑</a>
-      </div>
-    </footer>
+    <footer><p>Functional Analysis · 2026</p><div><a href="https://fuchow.github.io/">个人主页</a><a href="mailto:zf010309@mail.ustc.edu.cn">联系助教</a><a href="#top">回到顶部 ↑</a></div></footer>
   </div>
 </body>
 </html>
