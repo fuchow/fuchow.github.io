@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a junior student in Hua Loo-keng's class at [School of Mathematical Science](https://math.ustc.edu.cn/ENGLISH/list.htm) of
+I am a senior student in Hua Loo-keng's class at [School of Mathematical Science](https://math.ustc.edu.cn/ENGLISH/list.htm) of
 [University of Science and Technology of China](https://en.ustc.edu.cn/index.htm), majoring in pure mathematics.
 
 My interest mainly concentrate on PDE and analysis, surely, does not exclude other interesting objects.
